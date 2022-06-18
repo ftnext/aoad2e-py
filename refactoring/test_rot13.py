@@ -32,3 +32,6 @@ class Rot13TransformTestCase(Rot13TestCase):
 
     def test_does_not_transform_non_english_letters(self):
         self.assertNoTransform("åéîøüçñあ")
+
+    def test_does_not_break_when_given_emojis(self):
+        self.assertNoTransform("✅🚫🙋")
