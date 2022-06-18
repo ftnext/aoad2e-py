@@ -4,6 +4,11 @@ import rot13
 
 
 class Rot13TestCase(TestCase):
+    def assertNoTransform(self, input_):
+        self.assertEqual(rot13.transform(input_), input_)
+
+
+class Rot13TransformTestCase(Rot13TestCase):
     def test_does_nothing_when_input_is_empty(self):
         self.assertEqual(rot13.transform(""), "")
 
