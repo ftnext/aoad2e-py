@@ -29,3 +29,6 @@ class Rot13TransformTestCase(Rot13TestCase):
 
     def test_does_not_transform_numbers(self):
         self.assertNoTransform("1234567890")
+
+    def test_does_not_transform_non_english_letters(self):
+        self.assertNoTransform("åéîøüçñあ")
