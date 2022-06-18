@@ -35,3 +35,11 @@ class Rot13TransformTestCase(Rot13TestCase):
 
     def test_does_not_break_when_given_emojis(self):
         self.assertNoTransform("✅🚫🙋")
+
+    # パラメタを渡さない(JavaScriptではundefinedとなる)はPythonでは起こらないので写経しない
+
+    def test_fails_fast_when_wrong_parameter_type_provided(self):
+        # 型チェックを使うことで、このテストは不要にできるかもしれない
+        with self.assertRaises(TypeError) as cm:
+            rot13.transform(123)
+        self.assertEqual(str(cm.exception), "Expected string parameter")

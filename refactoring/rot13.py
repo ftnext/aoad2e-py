@@ -1,4 +1,7 @@
 def transform(input_: str) -> str:
+    if not isinstance(input_, str):
+        raise TypeError("Expected string parameter")
+
     result = ""
     for character in input_:
         char_code = ord(character)
