@@ -23,3 +23,6 @@ class Rot13TransformTestCase(Rot13TestCase):
             rot13.transform("ABCDEFGHIJKLMNOPQRSTUVWXYZ"),
             "NOPQRSTUVWXYZABCDEFGHIJKLM",
         )
+
+    def test_does_not_transform_symbols(self):
+        self.assertNoTransform("`{@[")
