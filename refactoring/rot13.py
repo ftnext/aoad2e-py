@@ -7,9 +7,9 @@ def transform(input_: str) -> str:
 
 
 def transform_letter(char_code: int) -> str:
-    if is_between(char_code, "a", "m"):
+    if is_between(char_code, "a", "m") or is_between(char_code, "A", "M"):
         char_code += 13
-    elif is_between(char_code, "n", "z"):
+    elif is_between(char_code, "n", "z") or is_between(char_code, "N", "Z"):
         char_code -= 13
     return chr(char_code)
 

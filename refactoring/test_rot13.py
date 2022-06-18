@@ -12,3 +12,9 @@ class Rot13TestCase(TestCase):
             rot13.transform("abcdefghijklmnopqrstuvwxyz"),
             "nopqrstuvwxyzabcdefghijklm",
         )
+
+    def test_transforms_upper_case_letters(self):
+        self.assertEqual(
+            rot13.transform("ABCDEFGHIJKLMNOPQRSTUVWXYZ"),
+            "NOPQRSTUVWXYZABCDEFGHIJKLM",
+        )
