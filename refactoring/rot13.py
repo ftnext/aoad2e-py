@@ -5,11 +5,11 @@ def transform(input_: str) -> str:
     result = ""
     for character in input_:
         char_code = ord(character)
-        result += transform_letter(char_code)
+        result += transform_letter(character, char_code)
     return result
 
 
-def transform_letter(char_code: int) -> str:
+def transform_letter(letter: str, char_code: int) -> str:
     if is_between(char_code, "a", "m") or is_between(char_code, "A", "M"):
         char_code += 13
     elif is_between(char_code, "n", "z") or is_between(char_code, "N", "Z"):
