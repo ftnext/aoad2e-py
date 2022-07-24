@@ -13,6 +13,10 @@ def transform(input_: str) -> str:
 
 
 def transform_letter(letter: str) -> str:
+    assert re.match(
+        r"[A-Za-z]", letter
+    ), f"specify a letter in A-Za-z: {letter}"
+
     char_code = ord(letter)
     if letter.upper() <= "M":
         char_code += 13
