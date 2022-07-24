@@ -20,6 +20,8 @@ def transform_letter(letter: str) -> str:
     char_code = ord(letter)
     if letter.upper() <= "M":
         char_code += 13
+        rotation = 13
     else:
         char_code -= 13
+        rotation = -13
     return chr(char_code)
