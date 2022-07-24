@@ -10,18 +10,8 @@ def transform(input_: str) -> str:
 
 
 def transform_letter(letter: str, char_code: int) -> str:
-    if is_between(letter, char_code, "a", "m") or is_between(
-        letter, char_code, "A", "M"
-    ):
+    if ("a" <= letter <= "m") or ("A" <= letter <= "M"):
         char_code += 13
-    elif is_between(letter, char_code, "n", "z") or is_between(
-        letter, char_code, "N", "Z"
-    ):
+    elif ("n" <= letter <= "z") or ("N" <= letter <= "Z"):
         char_code -= 13
     return chr(char_code)
-
-
-def is_between(
-    letter: str, char_code: int, first_letter: str, last_letter: str
-) -> bool:
-    return first_letter <= letter <= last_letter
