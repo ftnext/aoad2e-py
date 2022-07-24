@@ -25,7 +25,3 @@ def is_between(
     letter: str, char_code: int, first_letter: str, last_letter: str
 ) -> bool:
     return letter >= first_letter and letter <= last_letter
-
-
-def code_for(letter: str) -> int:
-    return ord(letter)
