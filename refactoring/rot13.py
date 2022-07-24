@@ -24,4 +24,4 @@ def transform_letter(letter: str, char_code: int) -> str:
 def is_between(
     letter: str, char_code: int, first_letter: str, last_letter: str
 ) -> bool:
-    return letter >= first_letter and letter <= last_letter
+    return first_letter <= letter <= last_letter
