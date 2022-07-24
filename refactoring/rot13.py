@@ -17,9 +17,8 @@ def transform_letter(letter: str) -> str:
         r"[A-Za-z]", letter
     ), f"specify a letter in A-Za-z: {letter}"
 
-    char_code = ord(letter)
     if letter.upper() <= "M":
         rotation = 13
     else:
         rotation = -13
-    return chr(char_code + rotation)
+    return chr(ord(letter) + rotation)
