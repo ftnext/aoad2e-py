@@ -10,6 +10,7 @@ def transform(input_: str) -> str:
 
 
 def transform_letter(letter: str, char_code: int) -> str:
+    char_code = ord(letter)
     if ("a" <= letter <= "m") or ("A" <= letter <= "M"):
         char_code += 13
     elif ("n" <= letter <= "z") or ("N" <= letter <= "Z"):
