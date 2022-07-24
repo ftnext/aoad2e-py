@@ -4,12 +4,11 @@ def transform(input_: str) -> str:
 
     result = ""
     for character in input_:
-        char_code = ord(character)
-        result += transform_letter(character, char_code)
+        result += transform_letter(character)
     return result
 
 
-def transform_letter(letter: str, char_code: int) -> str:
+def transform_letter(letter: str) -> str:
     char_code = ord(letter)
     if ("a" <= letter <= "m") or ("A" <= letter <= "M"):
         char_code += 13
